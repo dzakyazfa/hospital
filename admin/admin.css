@@ -18,6 +18,7 @@ body{
 .navbar-brand{
     color: #fff !important;
     padding-left: 20px;
+    text-decoration: none;
 }
 .navbar-nav li{
     padding: 0 10px;
@@ -80,7 +81,7 @@ body{
     margin-top: 40px;
     height: 58px;
     width: 62px;
-    margin-top: 20px;
+    margin-top: 19px;
     margin-left: 507px;
     margin-bottom: 8px;
 }

@@ -131,6 +131,10 @@ body{
     margin-top: 3%;
     padding: 20px;
 }
+.footer-box .img .sosial{
+    width: 4;
+    size: 10px;
+}
 .footer-box img{
     width: 120px;
     margin-bottom: 20px;

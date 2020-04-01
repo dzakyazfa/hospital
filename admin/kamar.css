@@ -4,6 +4,9 @@
 }
 body{
     font-family: sans-serif;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
 #nav-bar{
     position: sticky;
@@ -35,6 +38,6 @@ body{
     outline: none !important;
 }
 
-
-
-
+tr{
+    padding-left: 20px;
+}

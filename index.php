@@ -85,9 +85,9 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-md-4 footer-box">
-                      <img src="">
-                      <p><b>Follow us on socials media for further informations</b></p>
-                    </div>
+                      <a href="https://web.facebook.com/dzakyy.dzakyy.98"><img src="image/facebook.png" class="sosial"></a>
+                      <a href="https://www.instagram.com/dzakyazfa_/"><img src="image/instagram.png"  class="sosial"></a>
+                      </div>
                     <div class="col-md-4 footer-box">
                       <p><b>HUBUNGI KAMI</b></p>
                       <p><i class="fa fa-map-marker"></i> Sawojajar, Malang</p>
@@ -104,3 +104,5 @@
                   </div>
                 </div>
               </section>
+</body>
+</html>
