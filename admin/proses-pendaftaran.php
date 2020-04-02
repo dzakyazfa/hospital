@@ -4,22 +4,21 @@ include("config.php");
 
 if(isset($_POST['Tambah'])){
 
-    $Nama = $_POST['Nama_Pasien'];
-    $JK = $_POST['Jenis_Kelamin'];
+    $nama = $_POST['nama'];
+    $jk = $_POST['jk'];
     $ttl = $_POST['TTL'];
-    $pekerjaan = $_POST['Pekerjaan'];
-    $Tipe = $_POST['Tipe_kamar'];
-    $no = $_POST['No_kamar'];
+    $pekerjaan = $_POST['pekerjaan'];
+    $tipe = $_POST['tipe'];
+    $no = $_POST['nomer'];
 
-    $sql = "INSERT INTO pasien (Nama_Pasien, Jenis_Kelamin, TTL, Pekerjaan, Tipe_Kamar, No_Kamar) VALUE ('$Nama', '$JK', '$ttl', '$pekerjaan', '$Tipe', '$no')";
+    $sql = "INSERT INTO pasien (nama, jk, TTL, pekerjaan, tipe, nomer) VALUE ('$nama', '$jk', '$ttl', '$pekerjaan', '$tipe', '$no')";
     $query = mysqli_query($db, $sql);
 
     if( $query ) {
-        header('Location: list-pasien.php?status=sukses');
+        header('Location: data.php?status=sukses');
     } else {
-        header('Location: list-pasien.php?status=gagal');
+        header('Location: data.php?status=gagal');
     }
-
 
 } else {
     die("Akses dilarang...");

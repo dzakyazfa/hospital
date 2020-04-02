@@ -10,7 +10,7 @@ $id = $_GET['id'];
 
 $sql = "SELECT * FROM pasien WHERE id=$id";
 $query = mysqli_query($db, $sql);
-$siswa = mysqli_fetch_assoc($query);
+$pasien = mysqli_fetch_assoc($query);
 
 if( mysqli_num_rows($query) < 1 ){
     die("data tidak ditemukan...");
@@ -22,54 +22,54 @@ if( mysqli_num_rows($query) < 1 ){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>EDIT</title>
+    <title>Aa'Admin</title>
 </head>
 
 <body>
     <header>
-        <h3>Formulir Edit Data</h3>
+        <h3>Form Edit Data</h3>
     </header>
 
     <form action="proses-edit.php" method="POST">
 
         <fieldset>
 
-            <input type="hidden" name="id" value="<?php echo $pasien['id'] ?>" />
+            <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />
 
         <p>
-            <label for="Nama_Pasien">Nama: </label>
-            <input type="text" name="Nama_Pasien" value="<?php echo $pasien['Nama_Pasien'] ?>" />
+            <label for="nama">Nama: </label>
+            <input type="text" name="nama" value="<?php echo $pasien['nama'] ?>" />
         </p>
         <p>
-            <label for="Jenis_Kelamin">Jenis Kelamin: </label>
-            <?php $JK = $pasien['Jenis_Kelamin']; ?>
-            <label><input type="radio" name="Jenis_Kelamin" value="laki-Laki" <?php echo ($JK == 'Laki-Laki') ? "checked": "" ?>> Laki-Laki</label>
-            <label><input type="radio" name="Jenis_Kelamin" value="perempuan" <?php echo ($JK == 'Perempuan') ? "checked": "" ?>> Perempuan</label>
+            <label for="jk">Jenis Kelamin: </label>
+            <?php $jk = $pasien['jk']; ?>
+            <label><input type="radio" name="jk" value="Laki-Laki" <?php echo ($jk == 'Laki-Laki') ? "checked": "" ?>> Laki-Laki</label>
+            <label><input type="radio" name="jk" value="Perempuan" <?php echo ($jk == 'Perempuan') ? "checked": "" ?>> Perempuan</label>
         </p>
         <p>
             <label for="TTL">Tempat, Tanggal Lahir: </label>
-            <input type="text" name="TTL" value="<?php echo $pasien['TTL'] ?>" />
+            <textarea name="TTL"><?php echo $pasien['TTL'] ?></textarea>
         </p>
         <p>
-            <label for="Pekerjaan">Pekerjaan: </label>
-            <input type="text" name="Pekerjaan" value="<?php echo $pasien['Pekerjaan'] ?>" />
+            <label for="pekerjaan">Pekerjaan: </label>
+            <input type="text" name="pekerjaan" value="<?php echo $pasien['pekerjaan'] ?>" />
         </p>
         <p>
-            <label for="Tipe_Kamar">Tipe Kamar: </label>
-            <?php $Tipe = $pasien['Tipe_Kamar']; ?>
-            <select name="Tipe Kamar">
-                <option <?php echo ($Tipe == 'President Suit') ? "selected": "" ?>>President Suit</option>
-                <option <?php echo ($Tipe == 'VVIP A') ? "selected": "" ?>>VVIP A</option>
-                <option <?php echo ($Tipe == 'VVIP B') ? "selected": "" ?>>VVIP B</option>
-                <option <?php echo ($Tipe == 'VVIP C') ? "selected": "" ?>>VVIP C</option>
-            </select>
+            <label for="tipe">Tipe Kamar: </label>
+            <?php $tipe = $pasien['tipe']; ?>
+            <select name="tipe">
+                <option <?php echo ($tipe == 'President Suit') ? "selected": "" ?>>President Suit</option>
+                <option <?php echo ($tipe == 'VVIP A') ? "selected": "" ?>>VVIP A</option>
+                <option <?php echo ($tipe == 'VVIP B') ? "selected": "" ?>>VVIP B</option>
+                <option <?php echo ($tipe == 'VVIP C') ? "selected": "" ?>>VVIP C</option>
+                </select>
         </p>
         <p>
-            <label for="No_Kamar">No Kamar: </label>
-            <input type="text" name="No_Kamar" value="<?php echo $siswa['No_Kamar'] ?>" />
+            <label for="nomer">No Kamar: </label>
+            <textarea name="nomer"><?php echo $pasien['nomer'] ?></textarea>
         </p>
         <p>
-            <input type="submit" value="Simpan" name="simpan" />
+            <input type="submit" value="Simpan" name="Simpan" />
         </p>
 
         </fieldset>
